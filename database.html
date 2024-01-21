@@ -31,12 +31,79 @@
   </div>
   <br>
   <div class="search-container">
-    <input type="text" placeholder="Search" name="search">
+    <input type="text" id="searchInput" placeholder="Search" name="search" oninput="searchTable()">
     <button type="submit"><i class="fa fa-search"></i></button>
   </div>
 </div>
+<br><br>
+<!-- Military units table -->
+<table id="militaryTable">
+  <thead>
+    <tr>
+      <th>SPECIALIZARE UNITATE MILITARA</th>
+      <th>NR. UNITATE MILITARA</th>
+      <th>DESPRE:</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Unitate 1</td>
+      <td>001</td>
+      <td>Description of Unitate 1</td>
+    </tr>
+    <tr>
+      <td>Unitate 2</td>
+      <td>002</td>
+      <td>Description of Unitate 2</td>
+    </tr>
+    <tr>
+      <td>Unitate 3</td>
+      <td>003</td>
+      <td>Description of Unitate 3</td>
+    </tr>
+    <tr>
+      <td>Unitate 4</td>
+      <td>004</td>
+      <td>Description of Unitate 4</td>
+    </tr>
+    <tr>
+      <td>Unitate 5</td>
+      <td>005</td>
+      <td>Description of Unitate 5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <div class="cop"><p>&copy; 2024 Copyright Vânătorii de Munte</p></div>
+  <script>
+    function searchTable() {
+        var input, filter, table, tr, td, i, j, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("militaryTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those that don't match the search query
+        for (i = 1; i < tr.length; i++) {  // Start from index 1 to skip the header row
+            td = tr[i].getElementsByTagName("td");
+            var found = false;
+
+            for (j = 0; j < td.length; j++) {
+                if (td[j]) {
+                    txtValue = td[j].textContent || td[j].innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        found = true;
+                        break; // Break the inner loop, as the keyword is found in this row
+                    }
+                }
+            }
+
+            // Display or hide the row based on whether the keyword is found
+            tr[i].style.display = found ? "" : "none";
+        }
+    }
+</script>
 </body>
 <audio controls autoplay id="myaudioindex">
   <source src="sunete.mp3" type="audio/mpeg">

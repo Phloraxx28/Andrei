@@ -592,3 +592,21 @@ marquee {
   button[type=submit]:hover {
     background-color: #3E3D2E; /* Darker camo color on hover */
   }
+
+  table {
+    margin-left: 200px;
+    width: 85%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    border: 1px solid #555;
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #4E4D3E; /* Camo color for the header */
+    color: white;
+  }
