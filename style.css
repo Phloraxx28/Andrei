@@ -572,7 +572,7 @@ marquee {
   input[type=text] {
     width: 400px;
     padding: 10px;
-    border: 5px solid #555; /* Border color */
+    border: 7px solid #555; /* Border color */
     border-radius: 5px; /* Rounded corners */
     box-sizing: border-box; /* Make sure padding and width are included in the total width */
     font-size: 16px; /* Increase font size */
