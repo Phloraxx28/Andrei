@@ -563,8 +563,8 @@ marquee {
     color: #141213;
   }
 
-   /* Add custom styles for the search bar */
-   .search-container {
+  .search-container {
+    padding-left: 10px;
     display: flex;
     align-items: center;
   }
@@ -572,15 +572,15 @@ marquee {
   input[type=text] {
     width: 400px;
     padding: 10px;
-    border: 7px solid #555; /* Border color */
+    border: 1px solid #555; /* Border color */
     border-radius: 5px; /* Rounded corners */
     box-sizing: border-box; /* Make sure padding and width are included in the total width */
     font-size: 16px; /* Increase font size */
   }
 
   button[type=submit] {
-    padding: 10px;
-    background-color: #4CAF50; /* Green background */
+    padding: 15px; /* Increased padding for a larger button */
+    background-color: #4E4D3E; /* Camo color */
     color: white; /* White text */
     border: 1px solid #555; /* Border color */
     border-radius: 5px; /* Rounded corners */
@@ -590,5 +590,5 @@ marquee {
   }
 
   button[type=submit]:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #3E3D2E; /* Darker camo color on hover */
   }
