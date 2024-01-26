@@ -36,7 +36,6 @@
   </div>
 </div>
 <br><br>
-<!-- Military units table -->
 <table id="militaryTable">
   <thead>
     <tr>
@@ -84,8 +83,7 @@
         table = document.getElementById("militaryTable");
         tr = table.getElementsByTagName("tr");
 
-        // Loop through all table rows, and hide those that don't match the search query
-        for (i = 1; i < tr.length; i++) {  // Start from index 1 to skip the header row
+        for (i = 1; i < tr.length; i++) { 
             td = tr[i].getElementsByTagName("td");
             var found = false;
 
@@ -94,12 +92,11 @@
                     txtValue = td[j].textContent || td[j].innerText;
                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
                         found = true;
-                        break; // Break the inner loop, as the keyword is found in this row
+                        break;
                     }
                 }
             }
 
-            // Display or hide the row based on whether the keyword is found
             tr[i].style.display = found ? "" : "none";
         }
     }
